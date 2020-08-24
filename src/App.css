@@ -1,38 +1,56 @@
+body {
+  background: rgb(80, 60, 94);
+  background: linear-gradient(
+    90deg,
+    rgba(80, 60, 94, 1) 0%,
+    rgba(74, 73, 156, 1) 0%,
+    rgba(75, 112, 203, 1) 68%,
+    rgba(78, 103, 176, 1) 100%
+  );
+}
 .App {
+  text-align: center;
+  cursor: default;
+}
+
+.tic-tac-toe {
+  width: 350px;
+  height: 350px;
+  border: 2px solid #000;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  background: wheat;
+}
+
+.square {
+  width: 33.3%;
+  height: 33.3%;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  font-size: 5em;
+}
+
+.text-winner {
+  font-size: 2em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.new-game {
+  padding: 0.5em 1em;
+  background: burlywood;
+  font-size: 1em;
+  font-weight: 600;
+  color: #000;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px #000;
+  transition: color 0.2s, background 0.2s;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.new-game:hover {
+  background: transparent;
+  color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-game:focus {
+  outline: none;
 }
